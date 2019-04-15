@@ -4,11 +4,16 @@ This project is made up of two parts, firstly digits localization, secondly reco
 
 Localization
 
+1. Imagedetection.py
 Use OpenCV to preprocess data by following steps:
 
-get inputs ->  convert into Grayscale ->  Binariztion ->  Edge detection 
+Get inputs ->  convert into Grayscale ->  Binariztion ->  Edge detection 
 ->  Finding contour ->  Remove noise ->  Extract ROI ->  Resize to (28,28)
+
+2. Videodetection.py
+Provide two video capture methods (file or camera). Localization technique is same as Image detection.
 
 Recognition
 
-Training MNIST classification model, input each individual digit
+1. Videorecognition.py
+Training MNIST classification model, based on Videodetection.py, modify ROI extraction technique to get better recognition result.
