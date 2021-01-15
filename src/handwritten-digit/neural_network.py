@@ -1,19 +1,8 @@
-#----------------------------------------------------------*
-# program : 2mnist.py;                date: Oct 18, 2018   *
-# version : x0.10;                    status: tested;      * 
-# ref: https://github.com/fchollet/deep-learning-with-python-notebooks/blob/96d58b5727fcf76106f929f5ce24c40fc9b46d75/2.1-a-first-look-at-a-neural-network.ipynb
-#                                                          *
-# purpose : demo of mnist net for hand written numerals    * 
-#           recognition.                                   *  
-#----------------------------------------------------------*
 import keras
 keras.__version__
 import numpy as np
-from keras.datasets import mnist
 
 #---------------------load data-----------------*
-# MNIST dataset pre-loaded in Keras, in the form of 4 Numpy arrays:
-#(train_images, train_labels), (test_images, test_labels) = mnist.load_data()
 f = np.load('mnist.npz')
 train_images,train_labels = f['x_train'],f['y_train']
 test_images,test_labels = f['x_test'],f['y_test']
@@ -64,8 +53,8 @@ test_labels = to_categorical(test_labels)
 network.fit(train_images, train_labels, epochs=5, batch_size=128)
 
 #---------------training result-------------------*
-#test_loss, test_acc = network.evaluate(test_images, test_labels)
-#print('test_acc:', test_acc)
+test_loss, test_acc = network.evaluate(test_images, test_labels)
+print('test_acc:', test_acc)
 #-------------Save model--------------------*
 network.save('model.h5')
 

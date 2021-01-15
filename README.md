@@ -1,19 +1,30 @@
-# Handwritten-digits-recognition
+# Computer Vision Project
 
-This project is made up of two parts, firstly digits localization, secondly recognition.
+### HandWritten digit locolization and recognition
 
-Localization
+* **Locolization**
+Utilize OpenCV libary to extract image unique feature for better precise locolization.
+<br>
 
-1. Imagedetection.py  
-Use OpenCV to preprocess data by following steps:
+    Image processing step:
+    * Grayscale raw image
+    * Binariztion 
+    * Edge detection
+    * Extract contour 
+    * Remove noise
+    * Calculate ROI
+<br>
 
-Get inputs ->  convert into Grayscale ->  Binariztion ->  Edge detection 
-->  Finding contour ->  Remove noise ->  Extract ROI ->  Resize to (28,28)
+* **Recognition**
+Design a simple neural network with just 2 dense layer
 
-2. Videodetection.py  
-Provide two video capture methods (file or camera). Localization technique is same as Image detection.
+<img src= width="300">
 
-Recognition
+### YOLO object recognition
 
-1. Videorecognition.py  
-Training MNIST classification model, based on Videodetection.py, modify ROI extraction technique to get better recognition result.
+YOLO (You Only Look Once) is an object recognition algorithm. 
+
+The standard YOLO model is trained using COCO dataset with 80 kinds of objects.
+
+In this project, the YOLO model is further trained using a new dataset, [MCIndoor 20000](https://github.com/bircatmcri/MCIndoor20000), to recognize **door**.
+
