@@ -20,12 +20,12 @@ Design a simple neural network with just 2 dense layer
 
 ### YOLO object recognition
 
-YOLO (You Only Look Once) is an object recognition algorithm. 
+YOLO (You Only Look Once) is an object detection algorithm. 
 
 The standard YOLO model is trained using COCO dataset with 80 kinds of objects.
 
 In this project, the YOLO model is further trained using a new dataset, [MCIndoor 20000](https://github.com/bircatmcri/MCIndoor20000), to recognize **door**.
 
-<img src="https://github.com/FreshmanD/Computer-Vision/blob/master/img/yolo_street_recognize.png?raw=true" width="500">
+<img src="https://github.com/FreshmanD/Computer-Vision/blob/master/img/yolo_street.png?raw=true" width="500">
 
-<img src="https://github.com/FreshmanD/Computer-Vision/blob/master/img/yolo_door_recognize.jpg?raw=true" width="300">
+<img src="https://github.com/FreshmanD/Computer-Vision/blob/master/img/yolo_door.jpg?raw=true" width="300">
