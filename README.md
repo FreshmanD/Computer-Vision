@@ -2,23 +2,21 @@
 
 ### HandWritten digit locolization and recognition
 
-* **Locolization**
-Utilize OpenCV libary to extract image unique feature for better precise locolization.
-<br>
+**Locolization**
+Use OpenCV libary to extract image unique feature for better precise locolization.
 
-    Image processing step:
-    * Grayscale raw image
-    * Binariztion 
-    * Edge detection
-    * Extract contour 
-    * Remove noise
-    * Calculate ROI
-<br>
+Image processing step:
+* Grayscale raw image
+* Binariztion 
+* Edge detection
+* Extract contour 
+* Remove noise
+* Calculate ROI
 
-* **Recognition**
+**Recognition**
 Design a simple neural network with just 2 dense layer
 
-<img src= width="300">
+<img src=https://github.com/FreshmanD/Computer-Vision/blob/master/img/localize_result.png, width="300">
 
 ### YOLO object recognition
 
@@ -28,3 +26,6 @@ The standard YOLO model is trained using COCO dataset with 80 kinds of objects.
 
 In this project, the YOLO model is further trained using a new dataset, [MCIndoor 20000](https://github.com/bircatmcri/MCIndoor20000), to recognize **door**.
 
+<img src=https://github.com/FreshmanD/Computer-Vision/blob/master/img/yolo_street_recognize.png, width="300">
+
+<img src=https://github.com/FreshmanD/Computer-Vision/blob/master/img/yolo_door_recognize.jpg, width="300">
